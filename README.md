@@ -5,7 +5,7 @@
 
 This is a Spring application that generates the invoice for the products by an user. It uses Redis for caching, cockroachDB database and a GraphQL APIs.
 
-CockroachDB: 
+##CockroachDB: 
 
 Install CockroachDB from the following link:- https://binaries.cockroachdb.com/cockroach-v20.1.17.windows-6.2-amd64.zip
 
@@ -17,7 +17,7 @@ C:\Users\Admin\Downloads> cockroach start-single-node --insecure `
 >> --http-addr=localhost:8080
 ```
 
-Redis:
+##Redis:
 
 Install WSL, enable the necessary features, and restart the system.
 
@@ -35,7 +35,7 @@ Run redis-cli and run the command ‘ping’. If you get the response ’pong’
 
 To view the data in Redis, install RedisInsight in your windows system from the following link:- https://download.redisinsight.redis.com/latest/RedisInsight-v2-win-installer.exe/
 
-GraphQL
+##GraphQL:
 
 The GraphQL queries for the APIs in the application:
 
