@@ -1,0 +1,68 @@
+type Product {
+	id: ID!,
+	name: String!,
+	price: Float!,
+	quantity: Int!,
+	totalPrice: Float!,
+	transactionId: String!
+}
+
+type Transaction {
+	id: ID!,
+	createdDate: String!,
+	createdTime: String!,
+	updatedDate: String!,
+	updatedTime: String!,
+	paymentStatus: String!,
+	amount: Float!
+}
+
+type ResponseInvoice {
+	id: ID!,
+	products:[Product],
+	createdDate: String!,
+	createdTime: String!,
+	updatedDate: String!,
+	updatedTime: String!,
+	paymentStatus: String!,
+	amount: Float!
+}
+
+input ResponseInvoiceInput {
+	products:[ProductInput],
+	createdDate: String!,
+	createdTime: String!,
+	updatedDate: String!,
+	updatedTime: String!,
+	paymentStatus: String!,
+	amount: Float!
+}
+
+input ProductInput {
+	id: ID,
+	name: String!,
+	price: Float!,
+	quantity: Int!,
+	totalPrice: Float,
+	transactionId: String
+}
+
+input TransactionInput {
+	createdDate: String!,
+	createdTime: String!,
+	updatedDate: String!,
+	updatedTime: String!,
+	paymentStatus: String!,
+	amount: Float!
+}
+
+type Query {
+	getInvoice(id: String!): ResponseInvoice,
+	getAllInvoices: [ResponseInvoice]
+}
+
+type Mutation {
+	saveInvoice(prods : [ProductInput], payment: Boolean): ResponseInvoice!,
+	updateInvoice(prods : [ProductInput], id: ID, payment: Boolean): ResponseInvoice!,
+	deleteInvoice(id: String!): String!
+}
