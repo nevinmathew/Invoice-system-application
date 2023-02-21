@@ -3,7 +3,7 @@
 <h3 align="left">Languages and Tools:</h3>
 <p align="left"> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/> </a> <a href="https://www.cockroachlabs.com/product/cockroachdb/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/cockroachdb.svg" alt="cockroachdb" width="40" height="40"/> </a> <a href="https://graphql.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg" alt="graphql" width="40" height="40"/> </a> <a href="https://redis.io" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg" alt="redis" width="40" height="40"/> </a> </p>
 
-This is a Spring application that generates the invoice for the products by an user. It uses Redis for caching, cockroachDB database and a GraphQL APIs.
+This is a Spring application that generates the invoice for the products purchased by an user. It uses Redis for caching, cockroachDB database and GraphQL APIs.
 
 ## CockroachDB: 
 
@@ -11,7 +11,7 @@ Install CockroachDB from the following link:- https://binaries.cockroachdb.com/c
 
 Open powershell and run the following command - 
 
-```bash
+```powershell
 C:\Users\Admin\Downloads> cockroach start-single-node --insecure `
 >> --listen-addr=localhost:26257 `
 >> --http-addr=localhost:8080
