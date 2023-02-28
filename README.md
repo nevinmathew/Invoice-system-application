@@ -38,6 +38,7 @@ To view the data in Redis, install RedisInsight in your windows system from the 
 ## GraphQL:
 
 Url: http://localhost:8080/api/graphql
+
 The GraphQL queries for the APIs in the application:
 
 ```graphql
