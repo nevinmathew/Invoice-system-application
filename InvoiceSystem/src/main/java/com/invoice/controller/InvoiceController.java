@@ -1,6 +1,10 @@
 package com.invoice.controller;
 
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +23,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.invoice.dto.ResponseInvoice;
 import com.invoice.entity.Product;
 import com.invoice.service.InvoiceService;
+import com.invoice.util.InvoicePDF;
+import com.lowagie.text.DocumentException;
+
+import jakarta.servlet.http.HttpServletResponse;
 
 @RestController
 @RequestMapping("/v1/invoice")
@@ -27,10 +35,22 @@ public class InvoiceController {
 	@Autowired
 	private InvoiceService invoiceService;
 	
+	@Autowired
+	private InvoicePDF pdf;
+	
 	@PostMapping("/save-invoice")
-	public ResponseEntity<ResponseInvoice> saveInvoice(@RequestBody List<Product> prods, @RequestParam(required = false) Boolean payment) {
+	public ResponseEntity<ResponseInvoice> saveInvoice(@RequestBody List<Product> prods, @RequestParam(required = false) Boolean payment, HttpServletResponse response) throws DocumentException, IOException  {
 		try {
-			return ResponseEntity.status(HttpStatus.CREATED).body(invoiceService.saveInvoice(prods,payment));
+			
+			ResponseInvoice invoice = invoiceService.saveInvoice(prods,payment);
+			response.setContentType("application/pdf");
+		    DateFormat dateFormat = new SimpleDateFormat("YYYY-MM-DD:HH:MM:SS");
+		    String currentDateTime = dateFormat.format(new Date());
+		    String headerkey = "Content-Disposition";
+		    String headervalue = "attachment; filename=invoice" + currentDateTime + ".pdf";
+		    response.setHeader(headerkey, headervalue);
+			pdf.buildPdfDocument(invoice, response);
+			return ResponseEntity.status(HttpStatus.CREATED).body(invoice);
 		} catch(Exception e) {
 			e.printStackTrace();
 			return ResponseEntity.status(HttpStatus.FORBIDDEN).body(null);
