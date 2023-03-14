@@ -132,6 +132,6 @@ mutation{
 }
 ```
 
-##License:
+## License:
 
 Distributed under the MPL License
