@@ -131,3 +131,7 @@ mutation{
     deleteInvoice(id: "d4ce58dc-bd3d-4205-b929-43b1835498e4")
 }
 ```
+
+##License:
+
+Distributed under the MPL License
