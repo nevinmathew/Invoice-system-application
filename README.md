@@ -134,6 +134,8 @@ mutation{
 
 ## Docker image:
 
+To download the images from the docker repository:
+
 ```bash
 docker pull nevin1m/invoice-system -a
 ```
