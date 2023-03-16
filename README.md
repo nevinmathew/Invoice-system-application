@@ -132,6 +132,12 @@ mutation{
 }
 ```
 
+## Docker image:
+
+```bash
+docker pull nevin1m/invoice-system -a
+```
+
 ## License:
 
 Distributed under the MPL License
