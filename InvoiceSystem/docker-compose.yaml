@@ -15,7 +15,7 @@ services:
       - "8082:8082"
   setup:
     image: cockroachdb/cockroach:v22.2.4
-    command: bash -c "chmod 777 /cockroach/cockroach-data/scripts/create-db.sh && /cockroach/cockroach-data/scripts/create-db.sh"
+    command: bash -c "chmod 777 /cockroach-data/scripts/create-db.sh && /cockroach/cockroach-data/scripts/create-db.sh"
     depends_on:
       - cockroachdb
   redis:
