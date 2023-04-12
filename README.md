@@ -1,4 +1,4 @@
-# Invoice-system-application
+# Invoice System
 
 <h3 align="left">Languages and Tools:</h3>
 <table>
