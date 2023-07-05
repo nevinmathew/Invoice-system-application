@@ -14,7 +14,7 @@
     </tbody>
 </table>
 
-This is a Spring application that generates the invoice for the products purchased by an user. It uses Redis for caching, cockroachDB database, GraphQL APIs and Docker.
+This is a Spring application that generates the invoice for the products purchased by an user. It uses Redis for caching, cockroachDB database, GraphQL APIs, Docker and OpenPDF.
 
 ## CockroachDB: 
 
