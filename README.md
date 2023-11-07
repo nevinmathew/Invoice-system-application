@@ -1,5 +1,14 @@
 # Invoice System
 
+## Table of Contents
+
+1. [Languages and Tools](#languages-and-tools)
+2. [CockroachDB Installation](#cockroachdb-installation)
+3. [Redis Installation](#redis-installation)
+4. [GraphQL](#graphql)
+5. [Docker Image](#docker-image)
+6. [License](#license)
+
 <h3 align="left">Languages and Tools:</h3>
 <table>
     <tbody>
