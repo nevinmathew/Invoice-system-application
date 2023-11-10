@@ -195,4 +195,4 @@ OpenPDF seamlessly integrates with the Spring Boot application, enhancing user e
 
 ## License
 
-This project is licensed under the MPL License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MPL License - see the [LICENSE.md](https://github.com/nevinmathew/Invoice-system-application/blob/main/License) file for details.
