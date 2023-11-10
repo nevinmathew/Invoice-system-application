@@ -49,7 +49,7 @@ The Invoice System is a Java-based Spring Boot application designed to manage an
 
 ### CockroachDB: 
 
-Install CockroachDB from the following link:- https://binaries.cockroachdb.com/cockroach-v20.1.17.windows-6.2-amd64.zip
+[Click here](https://binaries.cockroachdb.com/cockroach-v20.1.17.windows-6.2-amd64.zip) to install CockroachDB. 
 
 Open powershell and run the following command - 
 
