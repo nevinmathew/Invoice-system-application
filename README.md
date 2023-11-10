@@ -6,7 +6,6 @@ The Invoice System is a Java-based Spring Boot application designed to manage an
 
 1. [Languages and Tools](#languages-and-tools)
 2. [Dependencies](#dependencies)
-   - [Spring Boot](#spring-boot)
    - [CockroachDB](#cockroachdb)
    - [Redis](#redis)
    - [GraphQL](#graphql)
@@ -172,6 +171,21 @@ To download the images from the docker repository:
 ```bash
 docker pull nevin1m/invoice-system -a
 ```
+### Lombok
+
+[Lombok](https://projectlombok.org/) is a Java library that helps to reduce boilerplate code in your Spring Boot application. It provides a set of annotations that automatically generate common code during compilation, making your code more concise and readable. Start using Lombok annotations in your code to reduce verbosity and improve code readability.
+
+#### Key Features
+
+1. **@Getter and @Setter**: Automatically generate getter and setter methods for your classes.
+
+2. **@NoArgsConstructor, @AllArgsConstructor, and @RequiredArgsConstructor**: Generate constructors without the need for boilerplate code.
+
+3. **@EqualsAndHashCode**: Automatically generate equals and hashCode methods based on the fields of your class.
+
+4. **@ToString**: Automatically generate a meaningful toString method.
+
+To integrate Lombok into your project, add the Lombok dependency to your build configuration.
 
 ### PDF Generation Library (OpenPDF)
 
