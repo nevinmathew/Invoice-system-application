@@ -1,13 +1,27 @@
 # Invoice System
 
+The Invoice System is a Java-based Spring Boot application designed to manage and generate invoices for products bought by users. It utilizes CockroachDB for database management, Redis for caching, and integrates GraphQL for querying data.
+
 ## Table of Contents
 
 1. [Languages and Tools](#languages-and-tools)
-2. [CockroachDB Installation](#cockroachdb-installation)
-3. [Redis Installation](#redis-installation)
-4. [GraphQL](#graphql)
-5. [Docker Image](#docker-image)
-6. [License](#license)
+2. [Dependencies](#dependencies)
+   - [Spring Boot](#spring-boot)
+   - [CockroachDB](#cockroachdb)
+   - [Redis](#redis)
+   - [GraphQL](#graphql)
+   - [Lombok](#lombok)
+   - [PDF Generation Library (OpenPDF)](#pdf-generation-library-openpdf)
+3. [CockroachDB Installation](#cockroachdb-installation)
+4. [Redis Installation](#redis-installation)
+5. [GraphQL](#graphql-1)
+6. [Docker Setup](#docker-setup)
+7. [PDF Generation Library (OpenPDF)](#pdf-generation-library-openpdf-1)
+   - [Key Features](#key-features)
+   - [Integration in Invoice System](#integration-in-invoice-system)
+8. [Configuration](#configuration)
+   - [application.properties](#applicationproperties)
+9. [License](#license)
 
 <h3 align="left">Languages and Tools:</h3>
 <table>
@@ -23,9 +37,17 @@
     </tbody>
 </table>
 
-This is a Spring application that generates the invoice for the products purchased by an user. It uses Redis for caching, cockroachDB database, GraphQL APIs, Docker and OpenPDF.
 
-## CockroachDB: 
+## Dependencies
+
+- Spring Boot
+- CockroachDB
+- Redis
+- GraphQL
+- Lombok
+- PDF generation library (OpenPDF)
+
+### CockroachDB: 
 
 Install CockroachDB from the following link:- https://binaries.cockroachdb.com/cockroach-v20.1.17.windows-6.2-amd64.zip
 
@@ -37,7 +59,7 @@ C:\Users\Admin\Downloads> cockroach start-single-node --insecure `
 >> --http-addr=localhost:8080
 ```
 
-## Redis:
+### Redis:
 
 Install WSL, enable the necessary features, and restart the system.
 
@@ -55,7 +77,7 @@ Run redis-cli and run the command ‘ping’. If you get the response ’pong’
 
 To view the data in Redis, install RedisInsight in your windows system from the following link:- https://download.redisinsight.redis.com/latest/RedisInsight-v2-win-installer.exe/
 
-## GraphQL:
+### GraphQL:
 
 Url: http://localhost:8080/api/graphql
 
@@ -141,7 +163,9 @@ mutation{
 }
 ```
 
-## Docker image:
+### Docker Setup:
+
+The project includes Dockerfiles and a docker-compose.yml file for easy deployment using Docker. Follow the steps in the Docker Setup section above.
 
 To download the images from the docker repository:
 
@@ -149,6 +173,26 @@ To download the images from the docker repository:
 docker pull nevin1m/invoice-system -a
 ```
 
-## License:
+### PDF Generation Library (OpenPDF)
 
-Distributed under the MPL License
+The Invoice System leverages [OpenPDF](https://github.com/LibrePDF/OpenPDF), an open-source PDF generation library for Java, to dynamically create and manage PDF documents. OpenPDF simplifies the process of generating professional-looking invoices.
+
+#### Key Features:
+
+- **Text Formatting:** Precise control over text formatting ensures polished and professional PDF content.
+
+- **Image Embedding:** Supports embedding images into PDFs, facilitating the inclusion of logos and graphical elements.
+
+- **Page Manipulation:** Functionality for manipulating pages enhances organization and structure within generated documents.
+
+#### Integration in Invoice System:
+
+OpenPDF seamlessly integrates with the Spring Boot application, enhancing user experience by delivering well-designed and visually appealing invoices.
+
+## Configuration
+
+    application.properties: Configure database connections, GraphQL, and other application properties.
+
+## License
+
+This project is licensed under the MPL License - see the [LICENSE.md](LICENSE.md) file for details.
