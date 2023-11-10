@@ -49,7 +49,7 @@ The Invoice System is a Java-based Spring Boot application designed to manage an
 
 ### CockroachDB: 
 
-[Click here](https://binaries.cockroachdb.com/cockroach-v20.1.17.windows-6.2-amd64.zip) to install CockroachDB. 
+[Click here](https://www.cockroachlabs.com/docs/stable/install-cockroachdb-windows) to install CockroachDB. 
 
 Open powershell and run the following command - 
 
@@ -75,7 +75,7 @@ redis-server
 
 Run redis-cli and run the command ‘ping’. If you get the response ’pong’ then redis is running.
 
-To view the data in Redis, install RedisInsight in your windows system from the following link:- https://download.redisinsight.redis.com/latest/RedisInsight-v2-win-installer.exe/
+[Click here](https://download.redisinsight.redis.com/latest/RedisInsight-v2-win-installer.exe/) to install RedisInsight in your windows system to view the data in Redis.
 
 ### GraphQL:
 
