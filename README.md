@@ -9,18 +9,14 @@ The Invoice System is a Java-based Spring Boot application designed to manage an
    - [CockroachDB](#cockroachdb)
    - [Redis](#redis)
    - [GraphQL](#graphql)
+   - [Docker Setup](#docker-setup)
    - [Lombok](#lombok)
    - [PDF Generation Library (OpenPDF)](#pdf-generation-library-openpdf)
-3. [CockroachDB Installation](#cockroachdb-installation)
-4. [Redis Installation](#redis-installation)
-5. [GraphQL](#graphql-1)
-6. [Docker Setup](#docker-setup)
-7. [PDF Generation Library (OpenPDF)](#pdf-generation-library-openpdf-1)
-   - [Key Features](#key-features)
-   - [Integration in Invoice System](#integration-in-invoice-system)
-8. [Configuration](#configuration)
+      - [Key Features](#key-features)
+      - [Integration in Invoice System](#integration-in-invoice-system)
+3. [Configuration](#configuration)
    - [application.properties](#applicationproperties)
-9. [License](#license)
+4.[License](#license)
 
 <h3 align="left">Languages and Tools:</h3>
 <table>
