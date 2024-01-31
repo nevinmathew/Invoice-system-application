@@ -16,7 +16,7 @@ The Invoice System is a Java-based Spring Boot application designed to manage an
       - [Integration in Invoice System](#integration-in-invoice-system)
 3. [Configuration](#configuration)
    - [application.properties](#applicationproperties)
-4.[License](#license)
+4. [License](#license)
 
 <h3 align="left">Languages and Tools:</h3>
 <table>
