@@ -40,7 +40,7 @@ The Invoice System is a Java-based Spring Boot application designed to manage an
 - Redis
 - GraphQL
 - Lombok
-- PDF generation library (OpenPDF)
+- OpenPDF
 
 ### CockroachDB: 
 
@@ -183,7 +183,7 @@ docker pull nevin1m/invoice-system -a
 
 To integrate Lombok into your project, add the Lombok dependency to your build configuration.
 
-### PDF Generation Library (OpenPDF)
+### OpenPDF
 
 The Invoice System leverages [OpenPDF](https://github.com/LibrePDF/OpenPDF), an open-source PDF generation library for Java, to dynamically create and manage PDF documents. OpenPDF simplifies the process of generating professional-looking invoices.
 
